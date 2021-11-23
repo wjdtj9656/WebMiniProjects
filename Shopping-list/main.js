@@ -14,12 +14,24 @@ function onAdd() {
     input.value = '';
     input.focus();
 }
-
+let id = 0;
 function creatItem(text) {
     const itemRow = document.createElement('li');
     itemRow.setAttribute('class', 'item__row');
+    itemRow.setAttribute('data-id', id);
 
-    const item = document.createElement('div');
+    itemRow.innerHTML = `
+        <div class="item">
+            <span class="item__name">${text}</span>
+                <button class="item__delete">
+                    <i class="fas fa-trash-alt" data-id=${id}></i>
+                </button>
+            </span>
+        </div>
+        <div class="item__divider"></div>
+    `;
+    id++;
+    /* const item = document.createElement('div');
     item.setAttribute('class', 'item');
 
     const name = document.createElement('span');
@@ -40,7 +52,7 @@ function creatItem(text) {
     item.appendChild(deleteBtn);
 
     itemRow.appendChild(item);
-    itemRow.appendChild(itemDivider);
+    itemRow.appendChild(itemDivider); */
     return itemRow;
 }
 
@@ -51,5 +63,13 @@ addBtn.addEventListener('click', () => {
 input.addEventListener('keypress', (event) => {
     if(event.key === 'Enter'){
         onAdd();
+    }
+});
+
+items.addEventListener('click', (event) => {
+    const id = event.target.dataset.id;
+    if(id) {
+        const toBeDeleted = document.querySelector(`.item__row[data-id="${id}"]`);
+        toBeDeleted.remove();
     }
 });
