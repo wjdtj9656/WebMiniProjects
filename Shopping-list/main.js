@@ -1,6 +1,13 @@
 const items = document.querySelector('.items');
+const newItemForm = document.querySelector('.new-item-form');
 const input = document.querySelector('.footer__input');
 const addBtn = document.querySelector('.footer__button');
+
+newItemForm.addEventListener('submit', (event) => {
+    //submit은 페이지를 새로고침하는 특성이 있어서 preventDefault해줌.
+    event.preventDefault();
+    onAdd();
+});
 
 function onAdd() {
     const text = input.value;
@@ -14,6 +21,7 @@ function onAdd() {
     input.value = '';
     input.focus();
 }
+
 let id = 0;
 function creatItem(text) {
     const itemRow = document.createElement('li');
@@ -55,16 +63,6 @@ function creatItem(text) {
     itemRow.appendChild(itemDivider); */
     return itemRow;
 }
-
-addBtn.addEventListener('click', () => {
-    onAdd();
-});
-
-input.addEventListener('keydown', (event) => {
-    if(event.key === 'Enter'){
-        onAdd();
-    }
-});
 
 items.addEventListener('click', (event) => {
     const id = event.target.dataset.id;
