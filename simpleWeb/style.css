@@ -1,0 +1,52 @@
+
+.nav {
+    position: fixed;
+    top:0%;
+    left:0%;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: antiquewhite;
+}
+.items {
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    margin-left: 1%;
+    width:400px;
+}
+.items__logo {
+    padding: 10px 0;
+}
+.item {
+    margin: 3% 6%;
+}
+.item + i {
+    margin: 5% 6%;
+}
+.search {
+    display:flex;
+    justify-content: flex-start;
+    width: 30%;
+}
+.search__box {
+    border: 2px solid;
+    border-radius: 15%;
+    width: 80%;
+    margin: 1% 1%;
+}
+.search__box + i {
+    margin: 15px 2%;
+    cursor: pointer;
+}
+
+.nav__option {
+    display: flex;
+    justify-content: flex-end;
+    width: 10%;
+}
+.fa-id-badge {
+    margin: 15px 10%;
+    cursor: pointer;
+}
