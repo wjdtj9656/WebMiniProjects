@@ -68,3 +68,47 @@
     margin: 15px 10%;
     cursor: pointer;
 }
+.channel {
+    position: fixed;
+    top:0%;
+    left:0%;
+    margin-top: 50px;
+    background-color:bisque;
+    width: 20%;
+    height: 100%;
+}
+.channel__main {
+    display: flex;
+    justify-content: space-between;
+}
+.channel__title {
+    font-size: 15px;
+    margin-left: 8px;
+}
+.fa-step-backward {
+    margin: 15px 15px;
+}
+
+.channel__items{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.channel__item {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    height: 30px;
+    cursor: pointer;
+}
+.channel__img {
+    width: 30px;
+    height: 30px;
+}
+.item__name {
+    margin: 0px 10px;
+}
+.item__num {
+    font-size: 13px;
+    margin: 9px 5px;
+}
