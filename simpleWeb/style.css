@@ -1,13 +1,14 @@
 
 .nav {
     position: fixed;
+    border-bottom: 1px solid;
     top:0%;
     left:0%;
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: space-between;
-    background-color: antiquewhite;
+    background-color: white;
 }
 .items {
     display: flex;
@@ -44,7 +45,24 @@
 .nav__option {
     display: flex;
     justify-content: flex-end;
-    width: 10%;
+    width:350px;
+}
+
+.nav__option__item1 {
+    font-size: 15px;
+    margin: 10px 9px;
+    background-color:aliceblue;
+    border-radius: 25%;
+    line-height: 200%;
+}
+
+.nav__option__item2 {
+    font-size: 15px;
+    color:white;
+    margin: 10px 9px;
+    background-color:blueviolet;
+    border-radius: 25%;
+    line-height: 200%;
 }
 .fa-id-badge {
     margin: 15px 10%;
