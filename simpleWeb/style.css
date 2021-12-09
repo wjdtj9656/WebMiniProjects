@@ -112,3 +112,17 @@
     font-size: 13px;
     margin: 9px 5px;
 }
+.section__center {
+    position: relative;
+    top:43px;
+    left:20%;
+    background-color: white;
+}
+.section__center__main {
+    position: relative;
+    top:100px;
+    left:25%;
+    width: 400px;
+    height: 300px;
+    background-color: aquamarine;
+}
