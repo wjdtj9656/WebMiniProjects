@@ -86,6 +86,28 @@ public ResponseEntity<?> testTodo(){
 	  //ResponseDTO를 리턴한다.
 	  return ResponseEntity.ok().body(response);
   }
+  @DeleteMapping
+  public ResponseEntity<?> deleteTodo(@RequestBody TodoDTO dto){
+	  try {
+		  String temporaryUserId = "temporary-user";
+		  //TodoEntity로 변환
+		  TodoEntity entity = TodoDTO.toEntity(dto);
+		  //임시 사용자 아이디 설정
+		  entity.setUserId(temporaryUserId);
+		  //서비스를 이용해 entity를 삭제한다.
+		  List<TodoEntity> entities = service.delete(entity);
+		  //자바 스트림을 이용해 관련된 엔티티 리스트를 TodoDTO 리스트로 변환한다.
+		  List<TodoDTO> dtos = entities.stream().map(TodoDTO::new).collect(Collectors.toList());
+		  //변환된 TodoDTO 리스트를 이용해 RESPONSEDTO를 초기화한다.
+		  ResponseDTO<TodoDTO> response = ResponseDTO.<TodoDTO>builder().data(dtos).build();
+		  //responseDTO를 리턴한다.
+		  return ResponseEntity.ok().body(response);
+	  } catch (Exception e) {
+		  String error = e.getMessage();
+		  ResponseDTO<TodoDTO> response = ResponseDTO.<TodoDTO>builder().error(error).build();
+		  return ResponseEntity.badRequest().body(response);
+	  }
+  }
   
  
 }
