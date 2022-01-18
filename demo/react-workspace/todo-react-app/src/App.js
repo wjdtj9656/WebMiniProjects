@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Todo from './Todo';
 import React from 'react';
-
+import {Paper, List, Container} from "@material-ui/core";
+import AddTodo from "./AddTodo.js";
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -13,12 +14,36 @@ class App extends React.Component {
       ],
     };
   }
-  render() {
-    var todoItems = this.state.items.map((item, idx) => (
-      <Todo item={item} key={item.id} />
-    ));
 
-    return <div className="App">{todoItems}</div>;
+  //+버튼 함수 생성
+  add = (item) => {
+    const thisItems = this.state.items;
+    item.id = "ID-" + thisItems.length;
+    item.done = false;
+    thisItems.push(item);
+    this.setState({ items: thisItems});
+    console.log("items :", this.state.items);
+  }
+
+  render() {
+    var todoItems = this.state.items.length > 0 && (
+      <Paper style={{margin:16}}>
+        <List>
+          {this.state.items.map((item, idx)=> (
+            <Todo item={item} key={item.id}/>
+          ))}
+        </List>
+      </Paper>
+    )
+    //연결
+    return (
+      <div className="App">
+        <Container maxWidth="md">
+          <AddTodo add={this.add}/>
+          <div className="TodoList">{todoItems}</div>
+        </Container>
+      </div>
+    );
   }
 }
 export default App;
