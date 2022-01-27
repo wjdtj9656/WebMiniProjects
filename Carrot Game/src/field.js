@@ -2,7 +2,12 @@
 
 const CARROT_SIZE = 80;
 import * as sound from './sound.js';
-export default class Field{
+
+export const ItemType = Object.freeze({
+    carrot: 'carrot',
+    bug: 'bug',
+}) 
+export class Field{
     constructor(carrotCount, bugCount){
         this.carrotCount = carrotCount;
         this.bugCount = bugCount;
@@ -44,9 +49,9 @@ export default class Field{
         if(target.matches('.carrot')){
             target.remove();
             sound.playCarrot();
-            this.onFiledClick && this.onFiledClick('carrot');
+            this.onFiledClick && this.onFiledClick(ItemType.carrot);
     } else if(target.matches('.bug')){
-        this.onFiledClick && this.onFiledClick('bug');
+        this.onFiledClick && this.onFiledClick(ItemType.bug);
 
 
     }

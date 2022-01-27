@@ -2,7 +2,9 @@ const vertical = document.querySelector('.vertical');
 const horizontal = document.querySelector('.horizontal');
 const target = document.querySelector('.target');
 const tag = document.querySelector('.tag');
-
+addEventListener('resize', () => {
+    console.log(target.getBoundingClientRect().right);
+})
 addEventListener('load', () => {
     const targetRect = target.getBoundingClientRect();
     const targetHalfWidth = targetRect.width / 2;
