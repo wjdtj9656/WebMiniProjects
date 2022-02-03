@@ -1,13 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
 button {
   outline: none;
   border: 0;
   cursor: pointer;
 }
 
+.navbar {
+  background-color: beige;
+  display: block;
+  height: 50px;
+  padding: 0.7rem;
+  text-align: center;
+
+}
+.navbar-logo {
+  color:chartreuse;
+  margin-right: 0.5rem;
+}
+.navbar-count {
+  display:inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: chartreuse;
+}
 .habit {
   font-size: 2.5rem;
   padding: 0.5em;
   list-style: none;
+  text-align: center;
 }
 
 .habit-count {
