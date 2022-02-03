@@ -27,6 +27,22 @@ button {
   border-radius: 50%;
   background-color: chartreuse;
 }
+
+.add-form {
+  text-align: center;
+  padding-top: 2rem;
+}
+.add-input {
+  margin: 0 2rem;
+  font-size: 1.5rem;
+}
+.add-button {
+  display: inline-block;
+  width: 6rem;
+  background-color: antiquewhite;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
 .habit {
   font-size: 2.5rem;
   padding: 0.5em;
