@@ -43,7 +43,9 @@ handleAdd = name => {
 }
 handleReset = () => {
   const habits = this.state.habits.map(item => {
-    item.count = 0;
+    if(item.count !== 0){
+      return {...item, count: 0}
+    }
     return item;
   })
   this.setState({habits});
