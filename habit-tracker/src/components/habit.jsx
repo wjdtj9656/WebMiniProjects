@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 
 class Habit extends PureComponent {
-    
     handleIncrement = () => {
         this.props.onIncrement(this.props.habit);
     }
