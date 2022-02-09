@@ -1,8 +1,10 @@
 import React from 'react';
 import './app.css';
-
+import Navbar from './components/searchHeader/navbar';
 function app() {
-  return <h1>hello :)</h1>
+  return (
+    <Navbar />
+  );
 }
 
 export default app;

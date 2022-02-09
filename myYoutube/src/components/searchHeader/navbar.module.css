@@ -1,0 +1,53 @@
+:root {
+    size: 400px;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    height: 50px;
+}
+
+.titleArea {
+    display:flex;
+    margin: 0 1rem;
+}
+.title {
+    color:white;
+    margin: 0 0.5rem;
+    padding-top: 0.5rem;
+}
+.faYoutube {
+    color:brown;
+    background-color: transparent;
+    height: 50px;
+}
+
+.searchBar{
+    display: flex;
+}
+
+.getInput {
+    display: inline-block;
+    width: 450px;
+    height: 30px;
+    margin: 7px 5px;
+}
+.getButton {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+}
+
+
+@media screen and (max-width: 700px) { 
+    .getInput {
+        width: 350px;
+    }
+}
+@media screen and (max-width: 600px) { 
+    .getInput {
+        width: 200px;
+    }
+}
