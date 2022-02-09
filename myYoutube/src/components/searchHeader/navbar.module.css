@@ -48,6 +48,6 @@
 }
 @media screen and (max-width: 600px) { 
     .getInput {
-        width: 200px;
+        width: 150px;
     }
 }
