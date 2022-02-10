@@ -1,0 +1,29 @@
+.videoBlock {
+    display: flex;
+    width: 30rem;
+    height: 15rem;
+    outline:1px solid black;
+    box-shadow: 5px 5px 5px black;
+    margin: 1rem 1rem;
+    cursor: pointer;
+    transition: transform 250ms ease-in;
+}
+
+.videoBlock:hover {
+    transform: scale(1.02);
+}
+
+.thumbnails {
+    weight: 2rem;
+    height: 10rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+.thumbnailsText {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.thumbnailsAuthor {
+    color:cornflowerblue;
+}
