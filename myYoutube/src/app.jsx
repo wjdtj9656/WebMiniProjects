@@ -2,24 +2,22 @@ import React, {useState, useEffect} from 'react';
 import './app.css';
 import VideoList from './components/videoList/videoList';
 import Navbar from './components/searchHeader/navbar';
-function App() {
+function App({youtube}) {
   
   const [videos,setVideos] = useState([]);
-  
+  const search = query => {
+    youtube
+      .search(query)
+      .then(videos => setVideos(videos));
+  }
   useEffect(() => {
-    const requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    };
-    
-    fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyCPi39u5ZGiOUhDRYkdc084fy5DmIFJs3Y", requestOptions)
-      .then(response => response.json())
-      .then(result => console.log(setVideos(result.items)))
-      .catch(error => console.log('error', error));
+    youtube
+      .mostPopular()
+      .then(videos => setVideos(videos));
   }, []);
   return (
     <>
-    <Navbar />
+    <Navbar onSearch={search}/>
     <VideoList videos={videos}/>
     </>
   );

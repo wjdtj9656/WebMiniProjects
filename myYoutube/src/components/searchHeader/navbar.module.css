@@ -31,16 +31,17 @@
     display: flex;
 }
 
-.getInput {
-    display: inline-block;
-    width: 450px;
-    height: 30px;
+.getForm {
+    display: flex;
+    height: 2rem;
     margin: 7px 5px;
+    font-size: 1.2rem;
+}
+.getInput {
+    width: 450px;
 }
 .getButton {
-    display: inline-block;
-    width: 37px;
-    height: 37px;
+    width: 3rem;
 }
 
 
