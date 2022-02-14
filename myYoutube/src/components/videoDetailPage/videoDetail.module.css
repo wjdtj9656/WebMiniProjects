@@ -1,0 +1,16 @@
+.title {
+    margin-top: 100px;
+}
+.video {
+    margin-left: 5rem;
+    margin-top: 7rem;
+    min-width: 8rem;
+}
+.description{
+    margin-left: 5rem;
+    margin-top: 7rem;
+    min-width: 8rem; 
+}
+.descriptionDetail {
+    white-space: pre-wrap;
+}

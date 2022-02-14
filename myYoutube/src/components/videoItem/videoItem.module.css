@@ -8,6 +8,10 @@
     cursor: pointer;
     transition: transform 250ms ease-in;
 }
+.videoBlock.list{
+    width: 20rem;
+    height: 8rem;
+}
 
 .videoBlock:hover {
     transform: scale(1.02);
@@ -19,11 +23,72 @@
     margin-top: 3rem;
     margin-left: 1rem;
 }
+.thumbnails.list {
+    weight: 1rem;
+    height: 5rem;
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+
+}
 .thumbnailsText {
     margin-top: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
 }
+
+.thumbnailsText.list {
+    margin-top: 0.05rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
 .thumbnailsAuthor {
     color:cornflowerblue;
+}
+.thumbnailsAuthor.list {
+    font-size: 0.7rem;
+}
+
+@media screen and (max-width: 700px) { 
+    .videoBlock.list {
+        display: flex;
+        width: 5rem;
+        height: 5rem;
+        outline:1px solid black;
+        box-shadow: 5px 5px 5px black;
+        margin: 1rem 2rem;
+        cursor: pointer;
+        transition: transform 250ms ease-in;
+    }
+    .thumbnails.list {
+        weight: 0.5rem;
+        height: 2.5rem;
+        margin-top: 1.5rem;
+        margin-left: 0.5rem;
+    
+    }
+    .thumbnailsText{
+        display: none;
+    }
+}
+@media screen and (max-width: 900px) { 
+    .videoBlock.list {
+        display: flex;
+        width: 5rem;
+        height: 5rem;
+        outline:1px solid black;
+        box-shadow: 5px 5px 5px black;
+        margin: 1rem 2.3rem;
+        cursor: pointer;
+        transition: transform 250ms ease-in;
+    }
+    .thumbnails.list {
+        weight: 0.5rem;
+        height: 2.5rem;
+        margin-top: 1.5rem;
+        margin-left: 0.5rem;
+    
+    }
+    .thumbnailsText{
+        display: none;
+    }
 }
