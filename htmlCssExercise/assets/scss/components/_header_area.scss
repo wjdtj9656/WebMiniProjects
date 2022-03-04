@@ -1,0 +1,65 @@
+.header-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $booking-color-bg7;
+  z-index: 5000;
+}
+
+.place-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $place-header-height;
+  .title {
+    display: flex;
+    align-items: center;
+  }
+  .link-back {
+    display: flex;
+    align-items: center;
+  }
+  .my-orders {
+    font-weight: 800;
+    margin: 0 12px;
+  }
+}
+
+.place-tab {
+  height: $place-tab-height;
+  background-color: $booking-color-bg118;
+  border-top: 1px solid $booking-color-border11;
+}
+.tab-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: $booking-color-text131;
+  .tab {
+    flex: 1;
+    padding: 0 12px;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0.7;
+    &.is-active {
+      font-weight: 700;
+      opacity: 1;
+      .txt::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #fff;
+        line-height: 46px;
+      }
+    }
+  }
+  .txt {
+    position: relative;
+    display: inline-block;
+    padding: 8px 4px;
+  }
+}
