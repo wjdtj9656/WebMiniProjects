@@ -1,0 +1,259 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.main {
+  width: 500px;
+  height: 500px;
+  margin: 8% auto;
+  background-color: aquamarine;
+  border-radius: 5%;
+}
+
+.main__header {
+  padding: 12px 12px;
+  -webkit-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.main__title {
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.main__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main__input__text {
+  width: 65%;
+  height: 32px;
+}
+
+.main__input__button {
+  width: 20%;
+  background-color: black;
+  border-radius: 10%;
+}
+
+.main__input__button i {
+  color: white;
+}
+
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content > input[type="checkbox"] {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  margin-left: 10px;
+}
+
+.content > label {
+  font-size: 16px;
+  margin-left: 20px;
+  padding-top: 4px;
+  width: 100%;
+}
+
+.content > input[type="text"] {
+  font-size: 16px;
+  margin-left: 20px;
+  padding-top: 4px;
+  padding-left: 0;
+  width: 100%;
+}
+
+.item_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 118px;
+}
+
+.item_buttons > button {
+  width: 42px;
+  height: 42px;
+  color: #555555;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.item_buttons > button:first-child {
+  background-color: #bad4f5;
+  margin-right: 8px;
+}
+
+.todo_checkbox {
+  -webkit-appearance: auto !important;
+     -moz-appearance: auto !important;
+          appearance: auto !important;
+}
+
+.item input[type="text"] {
+  display: none;
+}
+
+.edit_buttons {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

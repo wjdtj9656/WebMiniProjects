@@ -1,0 +1,98 @@
+.main {
+  width: 500px;
+  height: 500px;
+  margin: 8% auto;
+  background-color: aquamarine;
+  border-radius: 5%;
+}
+
+.main__header {
+  padding: 12px 12px;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.main__title {
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.main__input {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main__input__text {
+  width: 65%;
+  height: 32px;
+}
+.main__input__button {
+  width: 20%;
+  background-color: black;
+  border-radius: 10%;
+  i {
+    color: white;
+  }
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content > input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-left: 10px;
+}
+
+.content > label {
+  font-size: 16px;
+  margin-left: 20px;
+  padding-top: 4px;
+  width: 100%;
+}
+
+.content > input[type="text"] {
+  font-size: 16px;
+  margin-left: 20px;
+  padding-top: 4px;
+  padding-left: 0;
+  width: 100%;
+}
+
+.item_buttons {
+  display: flex;
+  width: 118px;
+}
+
+.item_buttons > button {
+  width: 42px;
+  height: 42px;
+  color: #555555;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.item_buttons > button:first-child {
+  background-color: #bad4f5;
+  margin-right: 8px;
+}
+
+.todo_checkbox {
+  appearance: auto !important;
+}
+
+.item input[type="text"] {
+  display: none;
+}
+
+.edit_buttons {
+  display: none;
+}
