@@ -1,6 +1,6 @@
 import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
-function Expenses() {
+const Expenses = () => {
   const expenses = [
     {
       title: "Car insurance",
@@ -25,5 +25,5 @@ function Expenses() {
       <ExpenseItem val={expenses[2]}></ExpenseItem>
     </div>
   );
-}
+};
 export default Expenses;
