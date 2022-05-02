@@ -3,10 +3,12 @@ import Modal from "../UI/Modal";
 import { useContext } from "react";
 import cartContext from "../../store/Cart-context";
 import CartItem from "./CartItem";
+import Checkout from "./Checkout";
+import { useState } from "react";
 
 const Cart = (props) => {
   const cartCtx = useContext(cartContext);
-
+  const [showInput, setShowInput] = useState(false);
   const cartItemAddHandler = (item) => {
     cartCtx.addItem({
       ...item,
@@ -32,6 +34,21 @@ const Cart = (props) => {
       ))}
     </ul>
   );
+  const runOrder = () => {
+    setShowInput(true);
+  };
+  const buttons = () => {
+    return (
+      <div className={styles.actions}>
+        <button className={styles["button--alt"]} onClick={props.onCloseChart}>
+          Close
+        </button>
+        <button className={styles.button} onClick={runOrder}>
+          Order
+        </button>
+      </div>
+    );
+  };
   return (
     <Modal onCloseChart={props.onCloseChart}>
       {cartItems}
@@ -39,12 +56,8 @@ const Cart = (props) => {
         <span>Total amount</span>
         <span>{cartCtx.totalAmount.toFixed(2)}</span>
       </div>
-      <div className={styles.actions}>
-        <button className={styles["button--alt"]} onClick={props.onCloseChart}>
-          Close
-        </button>
-        <button className={styles.button}>Order</button>
-      </div>
+      {showInput && <Checkout onClick={props.onCloseChart} />}
+      {!showInput && buttons()}
     </Modal>
   );
 };
